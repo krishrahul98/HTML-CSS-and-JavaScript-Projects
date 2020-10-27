@@ -8,3 +8,6 @@ Projects related to HTML, CSS and JavaScript
 
 
 **Drum Roll** - A fun Javascript music website using Event Listeners.  [Website link](https://drum-roll.rahul.cf/)
+
+
+**Simon Game** - A fun Javascript game using JQuery library.  [Website link](https://simon-game.rahul.cf/)
