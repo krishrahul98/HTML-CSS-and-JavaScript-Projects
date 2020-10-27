@@ -1,6 +1,8 @@
 # HTML-CSS-and-JavaScript-Projects
 Projects related to HTML, CSS and JavaScript
 
+[![CodeFactor](https://www.codefactor.io/repository/github/krishrahul98/html-css-and-javascript-projects/badge/main)](https://www.codefactor.io/repository/github/krishrahul98/html-css-and-javascript-projects/overview/main)
+
 
 **Dice game** - A dice game using Javascript random function.  [Website link](https://dice-game.rahul.cf/)
 
