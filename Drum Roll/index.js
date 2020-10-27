@@ -1,7 +1,7 @@
 let drums = document.querySelectorAll(".drum");
 
 for (let i = 0; i < drums.length; i++) {
-  drums[i].addEventListener("click", function (event) {
+  drums[i].addEventListener("click", function () {
     let key = drums[i].innerHTML.toUpperCase();
     playSound(key);
     animateButton(key);
