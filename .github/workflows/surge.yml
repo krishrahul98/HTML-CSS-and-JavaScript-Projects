@@ -1,0 +1,35 @@
+name: Deploy on Surge
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: add-mask
+      run: echo "::add-mask::${{ secrets.SURGE_LOGIN }}"
+          
+    - name: Install Surge
+      run: npm install -g surge
+
+    - name: Deploy Dice Game
+      run:  surge ./Dice\ Game ${{secrets.DICEGAME}} --token ${{secrets.TOKEN}}
+  
+    - name: Deploy Drum Roll
+      run:  surge ./Drum\ Roll ${{secrets.DRUMROLL}} --token ${{secrets.TOKEN}}
+    
+    - name: Deploy Simon Game
+      run:  surge ./Simon\ Game ${{secrets.SIMONGAME}} --token ${{secrets.TOKEN}}
